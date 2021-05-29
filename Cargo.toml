@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "c02/web_app",
+    "c02/todo_app",
+]
