@@ -1,7 +1,14 @@
-fn main() {
-    let a = 1;
-    let b = 1;
-    let c = 1;
+mod to_do;
 
-    println!("Hello, world! {} {} {}", a, b, c);
+use to_do::structs::done::Done;
+use to_do::structs::pending::Pending;
+
+fn main() {
+    let done = Done::new("shopping");
+    println!("{}", done.super_struct.title);
+    println!("{}", done.super_struct.status);
+
+    let pending = Pending::new("laundry");
+    println!("{}", pending.super_struct.title);
+    println!("{}", pending.super_struct.status);
 }
