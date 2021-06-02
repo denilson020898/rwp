@@ -6,4 +6,5 @@ members = [
     "c03/basic_async",
     "c03/async_functions",
     "c03/multi_servers",
+    "c03/managing_views",
 ]
