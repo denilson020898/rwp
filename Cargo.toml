@@ -3,4 +3,7 @@ members = [
     "c02/web_app",
     "c02/todo_app",
     "c03/basic_setup",
+    "c03/basic_async",
+    "c03/async_functions",
+    "c03/multi_servers",
 ]
