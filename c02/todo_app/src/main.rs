@@ -3,8 +3,8 @@ mod processes;
 mod to_do;
 
 use serde_json::value::Value;
-use serde_json::{json, Map};
-use state::{read_file, write_to_file};
+use serde_json::Map;
+use state::read_file;
 use std::env;
 use to_do::to_do_factory;
 use processes::process_input;
