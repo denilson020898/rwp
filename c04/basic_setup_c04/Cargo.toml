@@ -1,0 +1,12 @@
+[package]
+name = "basic_setup_c04"
+version = "0.1.0"
+authors = ["Denilson <denilson@mplus.software>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde_json = { version = "1.0", default-features = false, features = ["alloc"] }
+actix-web = "2"
+actix-rt = "1.0"

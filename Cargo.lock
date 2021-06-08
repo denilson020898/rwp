@@ -519,6 +519,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "basic_setup_c04"
+version = "0.1.0"
+dependencies = [
+ "actix-rt",
+ "actix-web",
+ "serde_json",
+]
+
+[[package]]
 name = "bitflags"
 version = "1.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
