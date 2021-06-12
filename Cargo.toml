@@ -8,4 +8,5 @@ members = [
     "c03/multi_servers",
     "c03/managing_views",
     "c04/basic_setup_c04",
+    "c04/passing_params",
 ]
