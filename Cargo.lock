@@ -702,6 +702,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "display_html"
+version = "0.1.0"
+dependencies = [
+ "actix-rt",
+ "actix-service",
+ "actix-web",
+ "futures",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
 name = "dtoa"
 version = "0.4.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"

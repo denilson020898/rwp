@@ -11,4 +11,6 @@ members = [
     "c04/passing_params",
     "c04/json_serialization",
     "c04/extract_data",
+    "c05/display_html",
+    "c05/inject_js",
 ]

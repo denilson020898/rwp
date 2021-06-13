@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>To Do App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge"/>
+        <meta name="description" content="This is a simple to do app">
+    </head>
+    <body>
+        <h1>To Do Items Bruh</h1>
+        <input type="text" id="name", placeholder="create to do item">
+        <button id="create-button" value="Send">Create</button>
+    </body>
+    <script>
+        let createButtone = document.getElementById("create-button");
+        createButtone.addEventListener("click", postAlert);
+        function postAlert() {
+            let titleInput = document.getElementById("name");
+            alert(titleInput.value);
+            titleInput.value= null;
+        }
+    </script>
+</html>
