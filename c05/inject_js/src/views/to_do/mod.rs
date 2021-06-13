@@ -3,6 +3,7 @@ mod create;
 mod edit;
 mod get;
 mod utils;
+mod delete;
 use super::path::Path;
 
 pub fn item_factory(app: &mut web::ServiceConfig) {
@@ -20,5 +21,9 @@ pub fn item_factory(app: &mut web::ServiceConfig) {
     app.route(
         &base_path.define(String::from("/edit")),
         web::put().to(edit::edit),
+    );
+    app.route(
+        &base_path.define(String::from("/delete")),
+        web::post().to(delete::delete),
     );
 }
