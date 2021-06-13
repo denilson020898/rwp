@@ -13,4 +13,5 @@ members = [
     "c04/extract_data",
     "c05/display_html",
     "c05/inject_js",
+    "c05/inject_css",
 ]
