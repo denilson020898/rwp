@@ -649,6 +649,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "connect_to_db"
+version = "0.1.0"
+dependencies = [
+ "actix-rt",
+ "actix-service",
+ "actix-web",
+ "diesel",
+ "dotenv",
+ "futures",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
 name = "convert_case"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -690,12 +704,43 @@ dependencies = [
 ]
 
 [[package]]
+name = "define_db"
+version = "0.1.0"
+dependencies = [
+ "diesel",
+ "dotenv",
+]
+
+[[package]]
 name = "derive_more"
 version = "0.99.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5cc7b9cef1e351660e5443924e4f43ab25fbbed3e9a5f052df3677deb4d6b320"
 dependencies = [
  "convert_case",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "diesel"
+version = "1.4.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bba51ca66f57261fd17cadf8b73e4775cc307d0521d855de3f5de91a8f074e0e"
+dependencies = [
+ "bitflags",
+ "byteorder",
+ "diesel_derives",
+ "pq-sys",
+]
+
+[[package]]
+name = "diesel_derives"
+version = "1.4.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "45f5098f628d02a7a0f68ddba586fb61e80edec3bdc1be3b921f4ceec60858d3"
+dependencies = [
  "proc-macro2",
  "quote",
  "syn",
@@ -712,6 +757,12 @@ dependencies = [
  "serde",
  "serde_json",
 ]
+
+[[package]]
+name = "dotenv"
+version = "0.15.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "77c90badedccf4105eca100756a0b1289e191f6fcbdadd3cee1d2f614f97da8f"
 
 [[package]]
 name = "dtoa"
@@ -1512,6 +1563,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ac74c624d6b2d21f425f752262f42188365d7b8ff1aff74c82e45136510a4857"
 
 [[package]]
+name = "pq-sys"
+version = "0.4.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6ac25eee5a0582f45a67e837e350d784e7003bd29a5f460796772061ca49ffda"
+dependencies = [
+ "vcpkg",
+]
+
+[[package]]
 name = "proc-macro-hack"
 version = "0.5.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1967,6 +2027,12 @@ dependencies = [
  "ctor",
  "version_check",
 ]
+
+[[package]]
+name = "vcpkg"
+version = "0.2.13"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "025ce40a007e1907e58d5bc1a594def78e5573bb0b1160bc389634e8f12e4faa"
 
 [[package]]
 name = "version_check"
