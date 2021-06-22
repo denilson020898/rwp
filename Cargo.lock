@@ -704,6 +704,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "data_models"
+version = "0.1.0"
+dependencies = [
+ "actix-rt",
+ "actix-service",
+ "actix-web",
+ "diesel",
+ "dotenv",
+ "futures",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
 name = "define_db"
 version = "0.1.0"
 dependencies = [
