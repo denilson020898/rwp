@@ -2,7 +2,7 @@ use super::jwt;
 use actix_web::dev::ServiceRequest;
 
 pub fn check_password(password: String) -> Result<String, &'static str> {
-    match jwt::JwtToken::decore(password) {
+    match jwt::JwtToken::decode(password) {
         Ok(_token) => Ok(String::from("passed")),
         Err(message) => Err(message),
     }

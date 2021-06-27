@@ -18,7 +18,7 @@ impl JwtToken {
         token_str
     }
 
-    pub fn decore(encoded_token: String) -> Result<JwtToken, &'static str> {
+    pub fn decode(encoded_token: String) -> Result<JwtToken, &'static str> {
         let key: Hmac<Sha256> = Hmac::new_varkey(b"secret").unwrap();
         let token_str: &str = encoded_token.as_str();
         let token: Result<Token<Header, BTreeMap<String, i32>, _>, _> =

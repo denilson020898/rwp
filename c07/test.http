@@ -1,17 +1,27 @@
-GET http://localhost:8000/auth/login
+POST http://localhost:8000/user/create
 
 Content-Type: application/json
 
 {
-    "username": "boi2",
-    "password": "password"
+    "name": "denilson",
+    "email": "denilson@yopmail.com",
+    "password": "test"
 }
 
-GET http://localhost:8000/auth/login
+POST http://localhost:8000/auth/login
 
 Content-Type: application/json
 
 {
-    "username": "boi",
-    "password": "password"
+    "username": "denilson",
+    "password": "test"
+}
+
+POST http://localhost:8000/auth/logout
+
+Content-Type: application/json
+
+{
+    "username": "denilson",
+    "password": "test"
 }

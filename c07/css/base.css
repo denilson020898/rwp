@@ -1,46 +1,43 @@
-body {
-    background-color: #92A8D1;
-    font-family: JetBrains Mono, Arial, Helvetica, sans-serif;
-    height: 100vh;
+.itemContainer {
+    background: #034f84;
+    margin: 0.3rem;
 }
 
-@media (max-width: 500px) {
-    body {
-        padding: 1px;
-        display: grid;
-        grid-template-columns: 1fr;
-    }
+.itemContainer:hover {
+    background: #034f99;
 }
 
-@media (min-width: 500px) and (max-width: 550px) {
-    body {
-        padding: 1px;
-        display: grid;
-        grid-template-columns: 1fr 5fr 1fr;
-    }
-    .mainContainer {
-        grid-column-start: 2;
-    }
+.itemContainer p {
+    color: white;
+    display: inline-block;
+    margin: 0.5rem;
+    margin-right: 0.4rem;
+    margin-left: 0.4rem;
 }
 
-@media (min-width: 551px) and (max-width: 1000) {
-    body {
-        padding: 1px;
-        display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
-    }
-    .mainContainer {
-        grid-column-start: 2;
-    }
+.actionButton {
+    display: inline-block;
+    float: right;
+    background: #f7786b;
+    border: none;
+    padding: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: white;
 }
 
-@media (min-width: 1001) {
-    body {
-        padding: 1px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .mainContainer {
-        grid-column-start: 2;
-    }
+.actionButton:hover {
+    background: #f7686b;
+    color: black;
+}
+
+.inputContainer {
+    background: #034f84;
+    margin: 0.3rem;
+    margin-top: 2rem;
+}
+
+.inputContainer input {
+    display: inline-block;
+    margin: 0.4rem;
 }
