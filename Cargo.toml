@@ -19,4 +19,5 @@ members = [
     "c06/connect_to_db",
     "c06/data_models",
     "c07",
+    "c08",
 ]
