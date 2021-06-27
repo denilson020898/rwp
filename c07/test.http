@@ -1,12 +1,16 @@
 GET http://localhost:8000/auth/login
+
 Content-Type: application/json
+
 {
     "username": "boi2",
     "password": "password"
 }
 
 GET http://localhost:8000/auth/login
+
 Content-Type: application/json
+
 {
     "username": "boi",
     "password": "password"
