@@ -7,6 +7,7 @@ use actix_web::web;
 pub fn auth_factory(app: &mut web::ServiceConfig) {
     let base_path = Path {
         prefix: String::from("/auth"),
+        backend: true
     };
     let app = app.route(
         &base_path.define(String::from("/login")),
