@@ -1,0 +1,8 @@
+GET http://localhost:8000/auth/login
+
+HTTP/1.1 200 OK
+content-length: 0
+token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.0NAXbbVzeMaKZAl8HdOq3JcgIDf5xpGF2rkg5frw6FE
+date: Sun, 27 Jun 2021 06:40:58 GMT
+
+
