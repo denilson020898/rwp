@@ -1,8 +1,8 @@
-GET http://localhost:8000/auth/login
+POST http://localhost:8000/api/v1/auth/login
 
 HTTP/1.1 200 OK
 content-length: 0
-token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1fQ.OMK7-WIm6xwEM1inhy7MakzQCr95RVO0eWCmo3FpYww
-date: Sun, 27 Jun 2021 09:01:15 GMT
+token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.0NAXbbVzeMaKZAl8HdOq3JcgIDf5xpGF2rkg5frw6FE
+date: Sun, 04 Jul 2021 09:55:36 GMT
 
 

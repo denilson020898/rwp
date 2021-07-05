@@ -1,4 +1,4 @@
-POST http://localhost:8000/user/create
+POST http://localhost:8000/api/v1/user/create
 
 Content-Type: application/json
 
@@ -8,7 +8,7 @@ Content-Type: application/json
     "password": "test"
 }
 
-POST http://localhost:8000/auth/login
+POST http://localhost:8000/api/v1/auth/login
 
 Content-Type: application/json
 
