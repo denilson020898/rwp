@@ -1,5 +1,5 @@
 if (localStorage.getItem("user-token") == null) {
-    window.location.replace(document.location.origin + "/login/");
+    window.location.replace(document.location.origin + "/login");
 }
 
 function renderItems(items, processType, elementId, processFunction) {
@@ -29,7 +29,7 @@ function apiCall(url, method) {
     xhr.addEventListener('readystatechange', function() {
         if (this.readyState === this.DONE) {
             if (this.status === 401) {
-                window.location.replace(document.location.origin + "/login/");
+                window.location.replace(document.location.origin + "/login");
             } else {
             renderItems(JSON.parse(this.responseText)["pending_items"], "edit", "pendingItems", editItem);
             renderItems(JSON.parse(this.responseText)["done_items"], "delete", "doneItems", deleteItem);
@@ -68,7 +68,7 @@ function getItems() {
     call.send()
 }
 if (localStorage.getItem("user-token") == null) {
-    window.location.replace(document.location.origin + "/login/");
+    window.location.replace(document.location.origin + "/login");
 } else {
     getItems();
 }
