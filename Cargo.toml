@@ -20,4 +20,5 @@ members = [
     "c06/data_models",
     "c07",
     "c08",
+    "c09",
 ]
