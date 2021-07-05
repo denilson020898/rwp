@@ -4,7 +4,6 @@ use crate::models::item::item::Item;
 use crate::schema::to_do;
 use crate::{json_ser::to_do_items::ToDoItems, to_do::to_do_factory};
 use diesel::prelude::*;
-use diesel::query_dsl::methods::FilterDsl;
 
 pub fn return_state(user_id: &i32) -> ToDoItems {
     let conn = establish_connection();

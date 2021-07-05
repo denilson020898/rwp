@@ -14,12 +14,16 @@ mod schema;
 mod state;
 mod to_do;
 mod views;
+use log;
+use env_logger;
 
 #[actix_rt::main]
 async fn main() -> std::io::Result<()> {
+    env_logger::init();
     HttpServer::new(|| {
         let app = App::new()
             .wrap_fn(|req, srv| {
+                let request_url: String = String::from(*&req.uri().path().clone());
                 let passed: bool;
                 if *&req.path().contains("/item/") {
                     match auth::process_token(&req) {
@@ -39,7 +43,11 @@ async fn main() -> std::io::Result<()> {
                         req.into_response(HttpResponse::Unauthorized().finish().into_body())
                     )),
                 };
-                end_result
+                async move {
+                    let result  = end_result.await?;
+                    log::info!("{} -> {}", request_url, &result.status());
+                    Ok(result)
+                }
             })
             .configure(views::views_factory);
         return app;
