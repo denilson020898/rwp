@@ -17,3 +17,49 @@ pub fn extract_header_token(request: &ServiceRequest) -> Result<String, &'static
         None => Err("there is no token"),
     }
 }
+
+#[cfg(test)]
+mod check_credentials_tests {
+    use super::super::jwt::JwtToken;
+    use super::extract_header_token;
+    use super::check_password;
+    use actix_web::test;
+
+    #[test]
+    fn correct_check_password() {
+        let token: String = JwtToken::encode(32);
+        match check_password(token) {
+            Ok(msg) => assert_eq!(String::from("passed"), msg),
+            _ => panic!("correct password should pass")
+        }
+    }
+
+    #[test]
+    fn incorrect_check_password() {
+        let password: String = String::from("test");
+        match check_password(password) {
+            Err(msg) => assert_eq!("Could not decode", msg),
+            _ => panic!("check password should not be able to decode this"),
+        }
+    }
+
+    #[test]
+    fn no_token_in_extract_header_token() {
+        let mock_request = test::TestRequest::with_header("test", "test")
+            .to_srv_request();
+        match extract_header_token(&mock_request) {
+            Err(msg) => assert_eq!("there is no token", msg),
+            _ => panic!("token should not be present in service request"),
+        }
+    }
+
+    #[test]
+    fn correct_token_in_extract_header_token() {
+        let mock_request = test::TestRequest::with_header("user-token", "test")
+            .to_srv_request();
+        match extract_header_token(&mock_request) {
+            Ok(token) => assert_eq!(String::from("test"), token),
+            _ => panic!("token should be present in the header"),
+        }
+    }
+}
